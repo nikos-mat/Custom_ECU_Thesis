@@ -1,0 +1,17 @@
+host_ip=192.168.137.102
+port=1883
+client_name=Nikos
+username=AristurtleECU
+password=aristurtle!@#
+main_topic=toARCODE/variables
+arcode_topic=ECU/arcode_vars
+ssh_username=mat
+ssh_hostname=raspberrypi
+ssh_password=aristurtle!@#
+vcu_datafile_path=/home/mat/Documents/AristurtleProjects/Datafiles_CSV
+vcu_general_firmware_path=/home/mat/Documents/AristurtleProjects/vcu_raspberry/Version_Control/General
+vcu_control_firmware_path=/home/mat/Documents/AristurtleProjects/vcu_raspberry/Version_Control/Control
+safety_mcu_id=xdxd
+control_mcu_id=xdxd
+source_file=..\\Datalogging.xlsx
+//end

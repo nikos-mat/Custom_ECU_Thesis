@@ -1,0 +1,7 @@
+{
+    "files": [
+        "../ARCODE.py",
+        "../mainWindow.py",
+        "mainwindow.ui"
+    ]
+}

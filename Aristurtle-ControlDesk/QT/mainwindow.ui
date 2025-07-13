@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1348</width>
+    <height>687</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="centralwidjet_layout">
+      <item row="0" column="0">
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <property name="movable">
+         <bool>false</bool>
+        </property>
+        <widget class="QWidget" name="ecu_menu_tab">
+         <attribute name="title">
+          <string>VCU Menu</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="mqtt_connection_groupbox">
+            <property name="maximumSize">
+             <size>
+              <width>650</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Roboto</family>
+              <bold>true</bold>
+              <kerning>true</kerning>
+             </font>
+            </property>
+            <property name="title">
+             <string>MQTT Connection</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="0">
+              <widget class="QLabel" name="ip_label">
+               <property name="text">
+                <string>Target IP address:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0" colspan="4">
+              <widget class="QPushButton" name="connect_pushButton">
+               <property name="text">
+                <string>Connect</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="client_name_label">
+               <property name="text">
+                <string>My Client Name:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1" colspan="2">
+              <widget class="QLabel" name="connection_status_label">
+               <property name="text">
+                <string>Not Connected</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="connection_label">
+               <property name="text">
+                <string>Connection Status:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="ip_lineEdit">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QPushButton" name="ping_pushButton">
+               <property name="text">
+                <string>Ping IP</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QLabel" name="ping_output_label">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>80</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::DefaultContextMenu</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textFormat">
+                <enum>Qt::AutoText</enum>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1" colspan="3">
+              <widget class="QLineEdit" name="client_name_lineEdit"/>
+             </item>
+             <item row="4" column="3">
+              <widget class="QLabel" name="connection_status_led">
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Roboto</family>
+                 <kerning>true</kerning>
+                 <fontweight>Black</fontweight>
+                </font>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>images/red-led.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="0" rowspan="3">
+           <widget class="QGroupBox" name="control_mcu_groupbox">
+            <property name="minimumSize">
+             <size>
+              <width>450</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>650</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Roboto</family>
+              <pointsize>9</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Control MCU</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_7">
+             <item row="1" column="3">
+              <widget class="QLabel" name="control_mcu_status_led">
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Roboto</family>
+                 <pointsize>9</pointsize>
+                 <kerning>true</kerning>
+                 <fontweight>Black</fontweight>
+                </font>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>images/red-led.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLabel" name="control_mcu_status_label">
+               <property name="text">
+                <string>Activity</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="5">
+              <widget class="QPushButton" name="control_stop_mcu_button">
+               <property name="text">
+                <string>Stop</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QPushButton" name="control_reset_mcu_button">
+               <property name="text">
+                <string>Reset</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="control_mcu_id_label">
+               <property name="text">
+                <string>MCU ID:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2" colspan="4">
+              <widget class="QGroupBox" name="control_firmware_managemen_groupBox">
+               <property name="title">
+                <string>Firmware Management</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_8">
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="control_choose_local_file_button">
+                  <property name="text">
+                   <string>Select local file</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QPushButton" name="control_refresh_files_button">
+                  <property name="text">
+                   <string>Refresh folder</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1" colspan="2">
+                 <widget class="QLineEdit" name="control_destination_path_lineEdit"/>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QPushButton" name="control_delete_file_button">
+                  <property name="text">
+                   <string>Delete file</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0" colspan="3">
+                 <widget class="QLabel" name="control_firmware_status_label">
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QPushButton" name="control_transfer_file_button">
+                  <property name="maximumSize">
+                   <size>
+                    <width>75</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Transmit</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0" colspan="4">
+                 <widget class="QTableWidget" name="control_binfiles_tableWidget">
+                  <property name="sizeAdjustPolicy">
+                   <enum>QAbstractScrollArea::AdjustToContents</enum>
+                  </property>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::NoEditTriggers</set>
+                  </property>
+                  <property name="dragDropOverwriteMode">
+                   <bool>false</bool>
+                  </property>
+                  <property name="selectionMode">
+                   <enum>QAbstractItemView::SingleSelection</enum>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectRows</enum>
+                  </property>
+                  <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="horizontalHeaderStretchLastSection">
+                   <bool>true</bool>
+                  </attribute>
+                  <attribute name="verticalHeaderCascadingSectionResizes">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="verticalHeaderStretchLastSection">
+                   <bool>false</bool>
+                  </attribute>
+                  <column>
+                   <property name="text">
+                    <string>Date</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>kB</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>Name</string>
+                   </property>
+                  </column>
+                 </widget>
+                </item>
+                <item row="0" column="1" colspan="3">
+                 <widget class="QLineEdit" name="control_local_path_lineEdit"/>
+                </item>
+                <item row="3" column="2" colspan="2">
+                 <widget class="QPushButton" name="control_load_code_button">
+                  <property name="text">
+                   <string>Load file</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="control_destination_path_label">
+                  <property name="text">
+                   <string>Destination_path:</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QPushButton" name="control_reset_mcu_id_button">
+               <property name="maximumSize">
+                <size>
+                 <width>45</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Roboto</family>
+                 <pointsize>9</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Reset</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4" colspan="2">
+              <widget class="QLineEdit" name="control_mcu_id_lineEdit"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QGroupBox" name="groupBox">
+            <property name="font">
+             <font>
+              <family>Roboto</family>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Supervisor</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_12">
+             <item row="0" column="3">
+              <widget class="QLabel" name="temperature_label">
+               <property name="text">
+                <string>CPU Temp:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QLabel" name="temperature_value_label">
+               <property name="text">
+                <string>-</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QPushButton" name="poweroff_pi">
+               <property name="maximumSize">
+                <size>
+                 <width>80</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Roboto</family>
+                 <pointsize>9</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Poweroff</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0" colspan="2">
+              <widget class="QPushButton" name="reboot_pi">
+               <property name="font">
+                <font>
+                 <family>Roboto</family>
+                 <pointsize>9</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Reboot</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0" colspan="3">
+              <widget class="QLabel" name="datalogging_timestamp">
+               <property name="text">
+                <string>DL Timespamp:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="3" colspan="2">
+              <widget class="QLabel" name="datalogging_timestamp_value">
+               <property name="text">
+                <string>-</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0" colspan="3">
+              <widget class="QLabel" name="streaming_hz">
+               <property name="text">
+                <string>Streaming (Hz):</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3" colspan="2">
+              <widget class="QLabel" name="streaming_hz_value">
+               <property name="text">
+                <string>-</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0" colspan="2">
+              <widget class="QPushButton" name="restart_supervisor">
+               <property name="font">
+                <font>
+                 <family>Roboto</family>
+                 <pointsize>9</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Restart Supervisor</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="3" colspan="2">
+              <widget class="QPushButton" name="stop_supervisor">
+               <property name="text">
+                <string>Stop Supervisor</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="2">
+              <widget class="QPushButton" name="start_supervisor">
+               <property name="font">
+                <font>
+                 <family>Roboto</family>
+                 <pointsize>9</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Start Supervisor</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="4" rowspan="4">
+           <widget class="QGroupBox" name="datafile_management_groupBox">
+            <property name="font">
+             <font>
+              <family>Roboto</family>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Data Files Managment</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_9">
+             <item row="3" column="1">
+              <widget class="QPushButton" name="delete_datafiles_pushButton">
+               <property name="text">
+                <string>Delete files</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="target_folder_label">
+               <property name="text">
+                <string>Target ECU Folder</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0" colspan="5">
+              <widget class="QTableWidget" name="datafiles_tableWidget">
+               <property name="sizeAdjustPolicy">
+                <enum>QAbstractScrollArea::AdjustToContents</enum>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="dragDropOverwriteMode">
+                <bool>false</bool>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::MultiSelection</enum>
+               </property>
+               <property name="selectionBehavior">
+                <enum>QAbstractItemView::SelectRows</enum>
+               </property>
+               <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="horizontalHeaderStretchLastSection">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderCascadingSectionResizes">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="verticalHeaderStretchLastSection">
+                <bool>false</bool>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>Date</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>kB</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Name</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+             <item row="0" column="1" colspan="4">
+              <widget class="QLineEdit" name="target_folder_lineEdit"/>
+             </item>
+             <item row="4" column="0" colspan="5">
+              <widget class="QLabel" name="datafile_download_status_label">
+               <property name="text">
+                <string>-</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QPushButton" name="refresh_datafiles_pushButton">
+               <property name="text">
+                <string>Refresh contents</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0" colspan="5">
+              <widget class="QGroupBox" name="convert_merge_groupBox">
+               <property name="title">
+                <string>Convert/Merge Files</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_10">
+                <item row="0" column="0" colspan="2">
+                 <widget class="QPushButton" name="convert_pushButton">
+                  <property name="text">
+                   <string>Convert files</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="2">
+                 <widget class="QLabel" name="convert_merge__status_label">
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="3" column="2" colspan="3">
+              <widget class="QPushButton" name="download_datafiles_pushButton">
+               <property name="text">
+                <string>Download files</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="1" rowspan="3">
+           <widget class="QGroupBox" name="general_mcu_groupbox">
+            <property name="minimumSize">
+             <size>
+              <width>450</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>650</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Roboto</family>
+              <pointsize>9</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>General MCU</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="1" column="3">
+              <widget class="QLabel" name="general_mcu_status_led">
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Roboto</family>
+                 <pointsize>9</pointsize>
+                 <kerning>true</kerning>
+                 <fontweight>Black</fontweight>
+                </font>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>images/red-led.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QPushButton" name="general_reset_mcu_button">
+               <property name="text">
+                <string>Reset</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLabel" name="general_mcu_status_label">
+               <property name="text">
+                <string>Activity</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="5">
+              <widget class="QPushButton" name="general_stop_mcu_button">
+               <property name="text">
+                <string>Stop</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="general_mcu_id_label">
+               <property name="maximumSize">
+                <size>
+                 <width>500</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>MCU ID:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2" colspan="4">
+              <widget class="QGroupBox" name="general_firmware_managemen_groupBox">
+               <property name="title">
+                <string>Firmware Management</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_2">
+                <item row="3" column="0">
+                 <widget class="QPushButton" name="general_refresh_files_button">
+                  <property name="text">
+                   <string>Refresh folder</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QPushButton" name="general_delete_file_button">
+                  <property name="text">
+                   <string>Delete</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1" colspan="2">
+                 <widget class="QLineEdit" name="general_destination_path_lineEdit"/>
+                </item>
+                <item row="4" column="0" colspan="3">
+                 <widget class="QLabel" name="general_firmware_status_label">
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="general_choose_local_file_button">
+                  <property name="text">
+                   <string>Select local file</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QPushButton" name="general_transfer_file_button">
+                  <property name="maximumSize">
+                   <size>
+                    <width>75</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Transmit</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0" colspan="4">
+                 <widget class="QTableWidget" name="general_binfiles_tableWidget">
+                  <property name="sizeAdjustPolicy">
+                   <enum>QAbstractScrollArea::AdjustToContents</enum>
+                  </property>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::NoEditTriggers</set>
+                  </property>
+                  <property name="dragDropOverwriteMode">
+                   <bool>false</bool>
+                  </property>
+                  <property name="selectionMode">
+                   <enum>QAbstractItemView::SingleSelection</enum>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectRows</enum>
+                  </property>
+                  <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="horizontalHeaderStretchLastSection">
+                   <bool>true</bool>
+                  </attribute>
+                  <attribute name="verticalHeaderCascadingSectionResizes">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="verticalHeaderStretchLastSection">
+                   <bool>false</bool>
+                  </attribute>
+                  <column>
+                   <property name="text">
+                    <string>Date</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>kB</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>Name</string>
+                   </property>
+                  </column>
+                 </widget>
+                </item>
+                <item row="3" column="2" colspan="2">
+                 <widget class="QPushButton" name="general_load_code_button">
+                  <property name="text">
+                   <string>Load chosen file</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1" colspan="3">
+                 <widget class="QLineEdit" name="general_local_path_lineEdit"/>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="general_destination_path_label">
+                  <property name="text">
+                   <string>Destination path:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="4" colspan="2">
+              <widget class="QLineEdit" name="general_mcu_id_lineEdit"/>
+             </item>
+             <item row="0" column="3">
+              <widget class="QPushButton" name="general_reset_mcu_id_button">
+               <property name="maximumSize">
+                <size>
+                 <width>45</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Roboto</family>
+                 <pointsize>9</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Reset</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="all_variables_tab">
+         <attribute name="title">
+          <string>Variables &amp;&amp; Tune</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="1">
+           <widget class="QGroupBox" name="control_tune_groupBox">
+            <property name="title">
+             <string>Control Tunning</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_14">
+             <item row="1" column="0">
+              <widget class="QLineEdit" name="control_tuning_value_lineEdit"/>
+             </item>
+             <item row="0" column="0">
+              <widget class="QComboBox" name="control_tuning_vars_comboBox">
+               <item>
+                <property name="text">
+                 <string>None</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QPushButton" name="control_tune_refresh_pushButton">
+               <property name="text">
+                <string>Refresh</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="control_tune_pushButton">
+               <property name="text">
+                <string>Tune</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QGroupBox" name="general_tune_groupBox">
+            <property name="title">
+             <string>General Tunning</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_15">
+             <item row="1" column="0">
+              <widget class="QLineEdit" name="general_tuning_value_lineEdit"/>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="general_tune_pushButton">
+               <property name="text">
+                <string>Tune</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QComboBox" name="general_tuning_vars_comboBox">
+               <item>
+                <property name="text">
+                 <string>None</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QPushButton" name="general_tune_refresh_pushButton">
+               <property name="text">
+                <string>Refresh</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="0" rowspan="2" colspan="3">
+           <widget class="QGroupBox" name="main_variables_groupBox">
+            <property name="font">
+             <font>
+              <family>Roboto</family>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Logged Variables</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QTableWidget" name="main_tableWidget_1">
+               <property name="sizeAdjustPolicy">
+                <enum>QAbstractScrollArea::AdjustToContents</enum>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <attribute name="horizontalHeaderMinimumSectionSize">
+                <number>500</number>
+               </attribute>
+               <attribute name="horizontalHeaderStretchLastSection">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderVisible">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderHighlightSections">
+                <bool>true</bool>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>Name</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Value</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionEdit_Defaults">
+   <property name="text">
+    <string>Edit Defaults</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

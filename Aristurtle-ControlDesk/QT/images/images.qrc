@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>popout.png</file>
+        <file>popin.png</file>
+        <file>blue-led.png</file>
+        <file>green-led.png</file>
+        <file>off-led.png</file>
+        <file>red-led.png</file>
+        <file>pause.png</file>
+        <file>play.png</file>
+        <file>floppydisk.png</file>
+        <file>aristurtleIcon.png</file>
+    </qresource>
+</RCC>
